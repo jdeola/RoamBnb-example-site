@@ -1,0 +1,361 @@
+:root {
+  --primary: #1dc0e6;
+  --shadow1: #1dc1e62d;
+  --secondary: #d5519c;
+  --shadow2: #d5519c2d;
+  --yellow: #fdea05;
+  --orange: #fbb615;
+  --blue: #5eb3e4;
+  --darkblue: #003764;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none !important;
+  font-family: "Lato Light", sans-serif;
+  list-style: none;
+}
+
+html,
+body {
+  padding-top: 35px;
+  scroll-behavior: smooth;
+}
+
+.splash-bg:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bighouse.jpeg),
+    linear-gradient(225deg, var(--shadow1) 25%, var(--shadow2) 75%);
+  background-position: 50% 0;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+.splashContent {
+  position: relative;
+}
+
+#heroImg {
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--secondary);
+  font-family: "Lato Bold", sans-serif;
+  text-shadow: 0.1rem 0.1rem 0.15rem gray;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+hr {
+  background-color: var(--secondary);
+  width: 50%;
+  height: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+p {
+  margin: 1rem;
+  line-height: 1.5em;
+  font-size: 1.25em;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+section {
+  position: relative;
+}
+
+#layout {
+  position: relative;
+  height: 100%; /* Used to enable scrolling */
+  background: linear-gradient(135deg, var(--shadow1) 25%, var(--shadow2) 75%);
+}
+
+#layout-wrapper {
+  padding-bottom: 2rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 2rem;
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.partners {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 250ms;
+}
+
+.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* LAYOUT AND NAV */
+
+#nav,
+#blogNav {
+  background: white;
+  height: 70px;
+  position: fixed;
+  max-width: 100vw !important;
+  list-style: none;
+  color: var(--primary);
+  font-size: large;
+  box-shadow: 0 0.2rem 0.2rem rgba(198, 198, 198, 1);
+}
+
+#splashNav {
+  color: var(--primary);
+  font-size: large;
+  text-shadow: 0.1rem 0.2rem 0.2rem var(--darkblue);
+}
+#navToggle {
+  background: var(--secondary);
+}
+
+.nav-item {
+  height: 100%;
+  transition: all 0.1s ease-in-out;
+  margin-top: 0;
+}
+
+@keyframes navitem {
+  from {
+    color: var(--primary);
+  }
+
+  to {
+    color: var(--secondary);
+  }
+}
+
+.nav-item:hover,
+.nav-item:active,
+.active {
+  animation-duration: 0.2s;
+  animation-name: navitem;
+  animation-fill-mode: forwards;
+}
+
+button {
+  padding: 0.5rem;
+  background-color: transparent;
+  border: 3px solid var(--secondary);
+  color: var(--secondary);
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  position: relative;
+  transition: 0.5s;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+.splash-btn {
+  /* box-shadow: 0.2rem 0.2rem 0.2rem; */
+}
+
+button:hover {
+  color: #fff;
+}
+
+button::before {
+  content: "";
+  background-color: var(--secondary);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0%;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+button:hover::before {
+  height: 100%;
+}
+
+/* ABOUT SECTION */
+
+.about {
+  position: relative;
+}
+
+.services {
+  position: relative;
+}
+
+.key-bg:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/key.jpeg);
+  background-position: 0 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.keyContent {
+  position: relative;
+  /* padding-top: 20%; */
+}
+
+.blog-card {
+  background: var(--shadow1);
+  transition: all 0.2s ease-in-out;
+}
+
+.blog-img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-card:hover {
+  transform: scale(1.05) translateY(-1rem);
+  box-shadow: 0.3rem 0.4rem var(--shadow2);
+}
+
+/* BLOG PAGE AND CARD STUFF */
+
+.blog-img {
+  width: 100%;
+  height: auto;
+}
+
+/* overlay slide config */
+
+/* .slide-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+} */
+
+.slide-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--shadow1);
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 0.5s ease;
+}
+
+.slide-container:hover .slide-overlay {
+  width: 100%;
+}
+
+.slide-text {
+  /* color: white; */
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+/* //////////////// */
+/* /// FONTS ///// */
+/* ////////////// */
+
+@font-face {
+  font-family: "Brown Pen";
+  src: url("../utilities/fonts/BrownPen.otf") format("opentype"),
+    url("../utilities/fonts/BrownPen.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato Bold";
+  src: url("../utilities/fonts/Lato-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato Light";
+  src: url("../utilities/fonts/Lato-Light.ttf") format("truetype");
+}
+
+.brownPen {
+  font-family: "Brown Pen", cursive;
+}
+
+.latoBold,
+.nav-item {
+  font-family: "Lato Bold", sans-serif;
+}
+
+.latoLight {
+  font-family: "Lato Light", sans-serif;
+}
+
+/* ///////////////////////// */
+/* // MOBILE BREAKPOINTS // */
+/* /////////////////////// */
+
+/* X-Small devices (portrait phones, less than 576px)
+No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px ) */
+@media only screen and (max-width: 576px) {
+  .key-bg:before {
+    opacity: 0.6;
+  }
+  .keyContent {
+    font-family: "Lato Bold", sans-serif !important;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .about {
+    min-height: 500px;
+  }
+  .keyContent {
+    font-size: x-large !important;
+  }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .about {
+    min-height: 600px;
+  }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
