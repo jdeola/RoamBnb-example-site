@@ -32,7 +32,7 @@ const AboutPage = ({ children }) => {
                             <Row >
                                 <Col lg className="">
                                     <p >
-                                        Roambnb is a national property management company that specializes in short term, vacation rental
+                                        Roambnb is a national property management company that specializes in short-term vacation rental
                                         properties. 
                                     </p>
                                 </Col>
@@ -48,7 +48,7 @@ const AboutPage = ({ children }) => {
                     </Row>
                     
                 </Container>
-                    {/* <Row>
+                    <Row>
                         <Col>
                             <p>
                                 We handle the entire process and manages the property after it is converted, creating a seamless experience for our clients. 
@@ -58,11 +58,11 @@ const AboutPage = ({ children }) => {
                         </Col>
                         <Col>
                             <StaticImage 
-                                src="../images/fishing.jpeg"
+                                src="../images/patio.jpeg"
                             />
 
                         </Col>
-                    </Row> */}
+                    </Row>
                     
                 </section>
 
