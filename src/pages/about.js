@@ -20,9 +20,10 @@ const AboutPage = ({ children }) => {
 
     return ( 
         <Layout>
-            <section >
+            <section className="about" >
                 {/* <h1 >About us</h1> */}
-                <Container fluid className="about">
+                
+                <Container fluid >
                     <div className="key-bg">
 
                     </div>
@@ -80,17 +81,17 @@ const AboutPage = ({ children }) => {
                     </p>
                 </section>
                 
-                <section className={ isVisible ? "partners show" : "partners"}>
-                    <Container>
+                <section className={ isVisible ? "partners show bg-white" : "partners bg-white"}>
+                    <Container className="">
                         <Partners/>
                     </Container>
                     
                     
                 </section>
-                    <div ref={targetRef} >
-                                            
-                    </div>
-                <section >
+                <div ref={targetRef} >
+                                        
+                </div>
+                <section className="bg-white">
                     <h1 >Meet Our Team</h1>
                     <Team />
                 </section>
