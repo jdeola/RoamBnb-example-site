@@ -205,10 +205,12 @@ button:hover::before {
 
 .about {
   position: relative;
+  background: white;
 }
 
 .services {
-  /* position: relative; */
+  position: relative;
+  height: 50vh;
 }
 
 .key-bg:before {
@@ -238,7 +240,7 @@ button:hover::before {
 }
 
 .keyContent {
-  /* position: relative; */
+  position: relative;
   /* padding-top: 20%; */
 }
 

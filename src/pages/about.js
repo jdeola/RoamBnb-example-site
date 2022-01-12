@@ -20,10 +20,12 @@ const AboutPage = ({ children }) => {
 
     return ( 
         <Layout>
-            <section className="about" >
+            <section >
                 {/* <h1 >About us</h1> */}
-                
-                <Container fluid >
+                <div className="fixed-bg" >
+
+                </div>    
+                <Container fluid className="about">
                     <div className="key-bg">
 
                     </div>
@@ -47,8 +49,6 @@ const AboutPage = ({ children }) => {
                             </Row>
                         </Col>
                     </Row>
-                    
-                </Container>
                     <Row>
                         <Col>
                             <p>
@@ -64,6 +64,8 @@ const AboutPage = ({ children }) => {
 
                         </Col>
                     </Row>
+                </Container>
+                    
                     
                 </section>
 
@@ -81,7 +83,7 @@ const AboutPage = ({ children }) => {
                     </p>
                 </section>
                 
-                <section className={ isVisible ? "partners show bg-white" : "partners bg-white"}>
+                <section className={ isVisible ? "partners show" : "partners"}>
                     <Container className="">
                         <Partners/>
                     </Container>
@@ -91,7 +93,7 @@ const AboutPage = ({ children }) => {
                 <div ref={targetRef} >
                                         
                 </div>
-                <section className="bg-white">
+                <section className="">
                     <h1 >Meet Our Team</h1>
                     <Team />
                 </section>
