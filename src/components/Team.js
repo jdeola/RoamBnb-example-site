@@ -8,13 +8,8 @@ function Team() {
 
     return (
         <Container>
-
-                <p>
-                    We take pride in the work we do and the partners we have. We’ve sought out the best companies and
-                    utilize them to help manage our properties safely and efficiently. Using the latest technology we are
-                    able to ensure each property is meticulously maintained and safely monitored so you can have peace of
-                    mind.
-                </p>
+            <h1 >Meet Our Team</h1>
+            
             <Row>
                 <Col>
                     <StaticImage 

@@ -20,32 +20,13 @@
 
 html,
 body {
-  padding-top: 35px;
   scroll-behavior: smooth;
   height: 100%;
+  /* min-height: 100vh; */
 }
 
-.splash-bg:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: url(../images/bighouse.jpeg),
-    linear-gradient(225deg, var(--shadow1) 25%, var(--shadow2) 75%);
-  background-position: 50% 0;
-  background-size: cover;
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
-  opacity: 0.4;
-}
-.splashContent {
-  position: relative;
-}
-
-#heroImg {
+main {
+  padding-top: 70px;
 }
 
 h1,
@@ -65,7 +46,7 @@ a {
 
 hr {
   background-color: var(--secondary);
-  width: 50%;
+  width: 25%;
   height: 10px;
   margin-left: auto;
   margin-right: auto;
@@ -86,16 +67,6 @@ section {
   position: relative;
 }
 
-#layout {
-  position: relative;
-  height: 100%; /* Used to enable scrolling */
-  background: linear-gradient(135deg, var(--shadow1) 25%, var(--shadow2) 75%);
-}
-
-#layout-wrapper {
-  padding-bottom: 2rem;
-}
-
 footer {
   position: absolute;
   bottom: 0;
@@ -104,17 +75,20 @@ footer {
   margin: 0.5rem;
 }
 
-.partners {
-  opacity: 0;
-  transform: translateX(-50%);
-  transition: 250ms;
+/* //////////////////// */
+/* /// LAYOUT + NAV ///// */
+/* ////////////////// */
+
+#layout {
+  position: relative;
+  min-height: 100vh;
+  height: 100%; /* Used to enable scrolling */
+  /* background: linear-gradient(135deg, var(--shadow1) 25%, var(--shadow2) 75%); */
 }
 
-.show {
-  transform: translateX(0);
-  opacity: 1;
+#layout-wrapper {
+  padding-bottom: 2rem;
 }
-/* LAYOUT AND NAV */
 
 #nav,
 #blogNav {
@@ -125,7 +99,7 @@ footer {
   list-style: none;
   color: var(--primary);
   font-size: large;
-  box-shadow: 0 0.2rem 0.2rem rgba(198, 198, 198, 1);
+  box-shadow: 0 0.2rem 0.5rem rgba(198, 198, 198, 1);
 }
 
 #splashNav {
@@ -177,6 +151,33 @@ button {
   margin: auto;
 }
 
+/* /////////////////////// */
+/* /// LANDING/SPLASH PAGE ///// */
+/* ///////////////////// */
+
+.splash-bg:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../images/bighouse.jpeg),
+    linear-gradient(225deg, var(--shadow1) 25%, var(--shadow2) 75%);
+  background-position: 50% 0;
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  opacity: 0.4;
+}
+.splashContent {
+  position: relative;
+}
+
+#heroImg {
+}
+
 .splash-btn {
   /* box-shadow: 0.2rem 0.2rem 0.2rem; */
 }
@@ -201,16 +202,31 @@ button:hover::before {
   height: 100%;
 }
 
-/* ABOUT SECTION */
+/* //////////////////// */
+/* /// ABOUT PAGE ///// */
+/* ////////////////// */
 
 .about {
   position: relative;
-  background: white;
+}
+
+.about2 {
+  padding: 2rem;
+  min-height: 50vh;
 }
 
 .services {
   position: relative;
-  height: 50vh;
+  min-height: 50vh;
+  background: white;
+}
+
+.beachHouse {
+  height: 40vh;
+  background: url(../images/beachHouse.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .key-bg:before {
@@ -227,22 +243,24 @@ button:hover::before {
   background-repeat: no-repeat;
 }
 
+.keyContent {
+  position: relative;
+}
+
 .fixed-bg {
   position: fixed;
-  z-index: -20;
-  height: 500px;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  background: url(../images/beachHouse.jpeg);
-  background-position: bottom;
+  background: url(../images/livingroom.jpeg), rgba(255, 255, 255, 0.5);
+  background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.keyContent {
-  position: relative;
-  /* padding-top: 20%; */
-}
+/* //////////////////// */
+/* /// BLOG PAGE ///// */
+/* ////////////////// */
 
 .blog-card {
   background: var(--shadow1);
@@ -259,14 +277,25 @@ button:hover::before {
   box-shadow: 0.3rem 0.4rem var(--shadow2);
 }
 
-/* BLOG PAGE AND CARD STUFF */
-
 .blog-img {
   width: 100%;
   height: auto;
 }
 
-/* overlay slide config */
+/* //////////////////// */
+/* /// ANIMATONS ///// */
+/* ////////////////// */
+
+.partners {
+  opacity: 0;
+  transform: translateX(-50%);
+  transition: 250ms;
+}
+
+.show {
+  transform: translateX(0);
+  opacity: 1;
+}
 
 /* .slide-image {
   display: block;
@@ -362,6 +391,7 @@ No media query for `xs` since this is the default in Bootstrap */
   }
   .keyContent {
     font-size: x-large !important;
+    padding-top: 10%;
   }
 }
 

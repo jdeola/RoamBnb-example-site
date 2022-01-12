@@ -9,12 +9,17 @@ export default function Footer() {
 
                 <hr />
                 <span>
-                    RoamBnb © 2022, Built by {` `} 
+                    RoamBnb © 2022, Built by {` `}
                 </span>
-                
-                <a href="https://www.amesdean.dev">AmesDean.dev</a> 
+               
+                <a href="https://www.amesdean.dev">AmesDean.dev</a>
+               
                 {` `} with {` `}
+              
                 <a href="https://www.gatsbyjs.com">Gatsby.js</a>
+ 
+
+                <hr />
             </Container>
             
        </footer>
