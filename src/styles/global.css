@@ -236,7 +236,7 @@ button:hover::before {
 }
 
 .custom-shape-divider-top-1642043515 .shape-fill {
-  fill: #1dc1e6;
+  fill: var(--secondary);
 }
 
 .about2 {

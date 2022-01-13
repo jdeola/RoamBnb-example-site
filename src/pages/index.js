@@ -11,9 +11,9 @@ const IndexPage = ({ children }) => {
     return ( 
 
         <div className="splash-bg" id="">
-            <Container fluid className="splashContent" id="">
-                <Navbar id="splashNav">
-                    <Nav className=" justify-space-between float-end">
+            <Container fluid className="splashContent d-flex align-items-center h-100" id="">
+                <Navbar className="d-none d-md-inline"fixed="bottom" id="splashNav">
+                    <Nav className=" justify-space-between">
                         <Link to="/about" className="m-2 nav-item ">
                             about
                         </Link>
@@ -25,8 +25,9 @@ const IndexPage = ({ children }) => {
                         </Link>
                     </Nav>
                 </Navbar>
-                <Row md >
-                    <Col md className="px-3">
+
+                <Row className="h-100 ">
+                    <Col md className="px-3 ">
                         <StaticImage 
                             src="../images/logo-full.png"
                             // height={800}
@@ -64,6 +65,7 @@ const IndexPage = ({ children }) => {
                         
                     </Col>
                 </Row>
+  
             </Container>
         </div>
     )

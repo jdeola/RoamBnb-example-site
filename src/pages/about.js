@@ -21,7 +21,7 @@ const AboutPage = ({ children }) => {
     return ( 
         <Layout>
             <section className="bg-white">
-                {/* <h1 >About us</h1> */}
+                
                 <div className="fixed-bg"  >
                                         
                 </div>
