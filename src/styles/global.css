@@ -212,6 +212,7 @@ button:hover::before {
 /* /// ABOUT PAGE ///// */
 /* ////////////////// */
 
+/* top asymmetrical triangle shape */
 .custom-shape-divider-top-1642043515 {
   position: absolute;
   top: 0;
@@ -231,7 +232,7 @@ button:hover::before {
 }
 
 .custom-shape-divider-top-1642043515 .shape-fill {
-  fill: var(--secondary);
+  fill: var(--primary);
 }
 
 .about {
@@ -247,6 +248,7 @@ button:hover::before {
   padding: 2rem;
   min-height: 50vh;
   background: white;
+  z-index: 1;
 }
 
 #keyImg-placeholder {
@@ -267,6 +269,9 @@ button:hover::before {
   background-size: cover;
   background-repeat: no-repeat;
 }
+.zIndex1 {
+  z-index: 1;
+}
 
 .keyContent {
   position: relative;
@@ -277,12 +282,35 @@ button:hover::before {
 .fixed-bg {
   position: fixed;
   z-index: -1;
+  max-width: 100vw;
   width: 100%;
   height: 100%;
   background: url(../images/livingroom.jpeg), rgba(255, 255, 255, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* bottom asymmetrical triangle shape */
+.custom-shape-divider-bottom-1642099140 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1642099140 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 125px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1642099140 .shape-fill {
+  fill: var(--primary);
 }
 
 .services {
@@ -292,16 +320,21 @@ button:hover::before {
 }
 
 .beachHouse {
+  position: relative;
   height: 40vh;
   background: url(../images/beachHouse.jpeg);
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
+  z-index: 2;
 }
 
-/* //////////////////// */
-/* /// BLOG PAGE ///// */
-/* ////////////////// */
+.blob {
+  position: absolute;
+  opacity: 0.5;
+  top: 5%;
+  left: 10%;
+}
 
 .custom-shape-divider-top-1642043323 {
   position: absolute;
@@ -324,6 +357,10 @@ button:hover::before {
 .custom-shape-divider-top-1642043323 .shape-fill {
   fill: #1dc0e6;
 }
+
+/* //////////////////// */
+/* /// BLOG PAGE ///// */
+/* ////////////////// */
 
 .blog-card {
   background: var(--shadow1);
@@ -350,6 +387,7 @@ button:hover::before {
 /* ////////////////// */
 
 .partners {
+  min-height: 50vh;
   opacity: 0;
   transform: translateX(-50%);
   transition: 250ms;

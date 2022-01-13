@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
+import { Container } from 'react-bootstrap'
 
 
 
@@ -7,7 +8,13 @@ import { StaticImage } from "gatsby-plugin-image"
 function Partners() {
     return (
         <div className="mb-2">
- 
+            <Container>
+                <p>
+                    We parter with industry leading companies to manage our 
+                    properties safely and efficiently.
+                </p>
+            </Container>        
+                    
             {/* Marketing partners */}
             <div className="d-flex row justify-content-center align-items-center" > 
                 <StaticImage 

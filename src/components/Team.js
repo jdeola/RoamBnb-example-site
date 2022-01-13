@@ -13,7 +13,7 @@ function Team() {
                 
                 
                 <Row>
-                    <Col>
+                    <Col md>
                         <StaticImage 
                             src="../images/jeremy.png"
                             width={600}
@@ -29,7 +29,7 @@ function Team() {
 
                     </Col>  
 
-                    <Col>
+                    <Col md>
                         <StaticImage 
                             src="../images/kristen.png"
                             width={600}
