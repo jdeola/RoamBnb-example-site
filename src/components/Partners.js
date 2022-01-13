@@ -7,7 +7,7 @@ import { StaticImage } from "gatsby-plugin-image"
 function Partners() {
     return (
         <div className="mb-2">
-            <h1>Partners</h1>
+ 
             {/* Marketing partners */}
             <div className="d-flex row justify-content-center align-items-center" > 
                 <StaticImage 

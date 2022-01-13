@@ -14,7 +14,6 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none !important;
-  font-family: "Lato Light", sans-serif;
   list-style: none;
 }
 
@@ -23,6 +22,7 @@ body {
   scroll-behavior: smooth;
   height: 100%;
   /* min-height: 100vh; */
+  font-family: "Lato Light", sans-serif;
 }
 
 main {
@@ -127,6 +127,10 @@ footer {
   }
 }
 
+.nav-brand:hover {
+  color: var(--secondary);
+}
+
 .nav-item:hover,
 .nav-item:active,
 .active {
@@ -143,7 +147,7 @@ button {
   font-size: 0.8rem;
   letter-spacing: 2px;
   position: relative;
-  transition: 0.5s;
+  transition: 0.3s;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -208,9 +212,12 @@ button:hover::before {
 
 .about {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .about2 {
+  position: relative;
   padding: 2rem;
   min-height: 50vh;
 }
@@ -225,7 +232,7 @@ button:hover::before {
   height: 40vh;
   background: url(../images/beachHouse.jpeg);
   background-size: cover;
-  background-position: center;
+  background-position: bottom center;
   background-repeat: no-repeat;
 }
 
@@ -245,6 +252,8 @@ button:hover::before {
 
 .keyContent {
   position: relative;
+  font-family: "Lato Bold";
+  color: var(--secondary);
 }
 
 .fixed-bg {
@@ -380,25 +389,27 @@ No media query for `xs` since this is the default in Bootstrap */
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
 @media only screen and (max-width: 768px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .about {
+    min-height: 400px;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .about {
-    min-height: 500px;
-  }
-  .keyContent {
-    font-size: x-large !important;
-    padding-top: 10%;
+    min-height: 400px;
   }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .about {
-    min-height: 600px;
+    min-height: 500px;
   }
 }
 

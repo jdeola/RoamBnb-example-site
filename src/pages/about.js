@@ -30,29 +30,60 @@ const AboutPage = ({ children }) => {
                     <div className="key-bg">
 
                     </div>
-                    <Row className="fs-5 keyContent">
-                        <Col sm={2} md={4} ></Col>
+                    <Row className="fs-2 keyContent pe-3">
+                        <Col xs={2} md={4} lg={5}></Col>
                         <Col className="">
-                            <Row >
-                                <Col lg className="">
-                                    <p >
-                                        Roambnb is a national property management company that specializes in short-term vacation rental
-                                        properties. 
-                                    </p>
-                                </Col>
-                            
-                                <Col lg className="" >
-                                    <p>
-                                        We help investors and existing home owners maximize their returns by converting
-                                        traditional long term rental properties into short term rentals. 
-                                    </p>
-                                </Col>
-                            </Row>
+                          
+                            <p className="text-center">
+                                Roambnb is a national property management company that specializes in short-term vacation rental
+                                properties. 
+                            </p>
+                        
                         </Col>
                     </Row>
                     
                 </Container>
+                <Container className="about mb-2 py-3">
+                    <Row>
+                        <Col className="d-flex align-items-center">
+                            <p className="text-center">
+                                We help investors and existing home owners maximize their returns by converting
+                                traditional long term rental properties into short term rentals. 
+                            </p>
+                        </Col>
+                        <Col md className="d-flex justify-content-center">
+                            <StaticImage 
+                                src="../images/undraw_revenue.png"
+                                id="revenue"
+                            />
+
+                        </Col>
+                    </Row>
+                </Container>
+                
+                    
+                    
+            </section>
+
+            <section className="services"  >
+                <Container fluid className="d-flex align-items-center beachHouse">
+                    
+                    <Row>
+                        <Col md></Col>
+                        <Col md>
+                            <h1 className="text-center">Our Services</h1>
+                            <p className="text-center">
+                                RoamBnB allows you to take a passive approach to owning rental properties while netting you two
+                                to three times more money than traditional long term rentals. Our first step in the process involves
+                                analyzing your property, or potential properties, to make sure it’s a good fit as a short term rental. 
+                            </p>
+
+                        </Col>
+                    </Row>
+                             
+                </Container>
                 <Container fluid className="about2 d-flex align-items-center" >
+                    
                     <Row className="flex-row-reverse">
                         
                         <Col md className="d-flex align-items-center">
@@ -70,26 +101,7 @@ const AboutPage = ({ children }) => {
                         </Col>
                     </Row>
                 </Container>
-                    
-                    
-            </section>
-
-            <section className="services"  >
-                <Container fluid className="beachHouse">
-                    <h1>Our Services</h1>
-                    <Row>
-                        <Col md></Col>
-                        <Col md>
-                            <p>
-                                RoamBnB allows you to take a passive approach to owning rental properties while netting you two
-                                to three times more money than traditional long term rentals. Our first step in the process involves
-                                analyzing your property, or potential properties, to make sure it’s a good fit as a short term rental. 
-                            </p>
-                        </Col>
-                    </Row>
-                             
-                </Container>
-                <Container fluid className="fit-content" >
+                <Container fluid className="" >
                     <Row className="d-flex justify-content-center align-items-center">
                         <Col>
                             <p>    
@@ -98,7 +110,7 @@ const AboutPage = ({ children }) => {
                                 property and leave it to us!
                             </p>
                         </Col>
-                        <Col className="d-flex justify-content-center p-3">
+                        <Col className="d-flex justify-content-center align-items-center p-3">
                             <StaticImage 
                                 src="../images/undraw_deliveries.png"
                                 alt="people carrying boxes"
