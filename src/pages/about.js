@@ -20,13 +20,13 @@ const AboutPage = ({ children }) => {
 
     return ( 
         <Layout>
-            <section className="bg-white">
+            <section className="">
                 
-                <div className="fixed-bg"  >
+                <div className="fixed-bg" >
                                         
                 </div>
-
-                <Container fluid className="about">
+                
+                <Container fluid className= {isVisible? "about show" : "about" } >
                     <div className="key-bg">
 
                     </div>
@@ -43,7 +43,10 @@ const AboutPage = ({ children }) => {
                     </Row>
                     
                 </Container>
-                <Container fluid className="about mb-2 py-3">
+                <div id="keyImg-placeholder"ref={targetRef}>
+
+                </div>
+                <Container fluid className="about2 py-3">
                     <div class="custom-shape-divider-top-1642043515">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                             <path d="M892.25 114.72L0 0 0 120 1200 120 1200 0 892.25 114.72z" class="shape-fill"></path>
@@ -137,7 +140,7 @@ const AboutPage = ({ children }) => {
                 </Container>
             </section>
             
-            <section  ref={targetRef}>
+            <section >
                 <Container >
                     <Partners/>
                 </Container>

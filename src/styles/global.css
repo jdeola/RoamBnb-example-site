@@ -211,12 +211,6 @@ button:hover::before {
 /* /// ABOUT PAGE ///// */
 /* ////////////////// */
 
-.about {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
 .custom-shape-divider-top-1642043515 {
   position: absolute;
   top: 0;
@@ -239,24 +233,24 @@ button:hover::before {
   fill: var(--secondary);
 }
 
+.about {
+  position: fixed;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+}
+
 .about2 {
   position: relative;
   padding: 2rem;
   min-height: 50vh;
-}
-
-.services {
-  position: relative;
-  min-height: 50vh;
   background: white;
 }
 
-.beachHouse {
-  height: 40vh;
-  background: url(../images/beachHouse.jpeg);
-  background-size: cover;
-  background-position: bottom center;
-  background-repeat: no-repeat;
+#keyImg-placeholder {
+  height: 500px;
+  background: transparent;
 }
 
 .key-bg:before {
@@ -287,6 +281,20 @@ button:hover::before {
   background: url(../images/livingroom.jpeg), rgba(255, 255, 255, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.services {
+  position: relative;
+  min-height: 50vh;
+  background: white;
+}
+
+.beachHouse {
+  height: 40vh;
+  background: url(../images/beachHouse.jpeg);
+  background-size: cover;
+  background-position: bottom center;
   background-repeat: no-repeat;
 }
 
