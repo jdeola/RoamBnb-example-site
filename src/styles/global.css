@@ -160,6 +160,10 @@ button {
 /* /// LANDING/SPLASH PAGE ///// */
 /* ///////////////////// */
 
+.splash-bg {
+  height: 100vh;
+}
+
 .splash-bg:before {
   content: " ";
   display: block;
@@ -179,9 +183,7 @@ button {
 .splashContent {
   position: relative;
   height: 100%;
-}
-
-#heroImg {
+  max-height: 100%;
 }
 
 .splash-btn {
@@ -227,7 +229,7 @@ button:hover::before {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 174px;
+  height: 170px;
   transform: rotateY(180deg);
 }
 
@@ -305,7 +307,7 @@ button:hover::before {
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 125px;
+  height: 170px;
   transform: rotateY(180deg);
 }
 
@@ -358,6 +360,10 @@ button:hover::before {
   fill: #1dc0e6;
 }
 
+.partner-text {
+  background: var(--primary);
+  color: white;
+}
 /* //////////////////// */
 /* /// BLOG PAGE ///// */
 /* ////////////////// */
@@ -388,9 +394,9 @@ button:hover::before {
 
 .partners {
   min-height: 50vh;
-  opacity: 0;
+  /* opacity: 0;
   transform: translateX(-50%);
-  transition: 250ms;
+  transition: 250ms; */
 }
 
 .show {
@@ -482,6 +488,12 @@ No media query for `xs` since this is the default in Bootstrap */
   .about,
   #keyImg-placeholder {
     height: 300px;
+  }
+  .custom-shape-divider-top-1642043515 svg {
+    height: 100px;
+  }
+  .custom-shape-divider-bottom-1642099140 svg {
+    height: 100px;
   }
 }
 

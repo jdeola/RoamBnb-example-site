@@ -11,8 +11,10 @@ const IndexPage = ({ children }) => {
     return ( 
 
         <div className="splash-bg" id="">
-            <Container fluid className="splashContent d-flex align-items-center h-100" id="">
+            <Container fluid className="splashContent d-flex justify-content-center align-items-center" > 
+ 
                 <Navbar className="d-none d-md-inline"fixed="bottom" id="splashNav">
+
                     <Nav className=" justify-space-between">
                         <Link to="/about" className="m-2 nav-item ">
                             about
@@ -26,12 +28,10 @@ const IndexPage = ({ children }) => {
                     </Nav>
                 </Navbar>
 
-                <Row className="h-100 ">
-                    <Col md className="px-3 ">
+                <Row className="d-flex">
+                    <Col md className="p-3">
                         <StaticImage 
                             src="../images/logo-full.png"
-                            // height={800}
-                            // width={600}
                             layout="constrained"
                             alt="logo"
                             id="heroImg"
@@ -47,16 +47,16 @@ const IndexPage = ({ children }) => {
                             </h3>
                         </Row> 
                         <Row className="py-3" >
-                            <Col md className="d-flex justify-content-center align-items-center">
+                            <Col md className="d-flex justify-content-center align-items-center py-2">
                                 
-                            <Link to="/about">
-                                <button className="py-2 splash-btn">
-                                    Learn More
-                                </button>
-                            </Link>
+                                <Link to="/about">
+                                    <button className="splash-btn">
+                                        Learn More
+                                    </button>
+                                </Link>
                             </Col>
-                            <Col md className="d-flex justify-content-center align-items-center">
-                                <button className="py-2 splash-btn">
+                            <Col md className="d-flex justify-content-center align-items-center py-2">
+                                <button className="">
                                     Book a Call
                                 </button>
                             </Col>
