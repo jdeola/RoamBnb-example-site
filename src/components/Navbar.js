@@ -12,7 +12,7 @@ const NavBar = () => {
         <Container>
           <Link to="/" className="nav-brand d-inline-flex align-items-center" id="navBrand">
             <StaticImage
-              src="../static/favicon.png"
+              src="../../static/favicon.png"
               className="me-2" 
             />
             <span className="fs-3 brownPen">

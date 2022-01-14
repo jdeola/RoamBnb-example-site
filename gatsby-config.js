@@ -8,8 +8,8 @@ module.exports = {
     title: `RoamBnb - STR specialist`,
     description: `Short term rental management`,
     author: `Roambnb`,
-    url: `https://www.roam-bnb.com`,
-    image: './src/static/favicon.png',
+    url: `https://www.roam-bnb.com`, // No trailing slash allowed!
+    image: '/favicon.png', // Path to the image placed in the 'static' folder, in the project's root directory.
     type: 'website'
   },
   plugins: [
@@ -64,7 +64,7 @@ module.exports = {
         short_name: 'RoamBnB',
         start_url: '/',
         display: 'standalone',
-        icon: 'src/static/favicon.png'
+        icon: 'src/images/logo-full.png' // This path is relative to the root of the site.
       }
     },
     {
