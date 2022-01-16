@@ -6,7 +6,7 @@ import { Navbar } from 'react-bootstrap';
 import "../styles/global.css";
 import { MDXProvider } from "@mdx-js/react"
 import { Button, Card } from "react-bootstrap";
-import Seo from "./seo";
+import Seo from "./Seo";
 import Footer from "./Footer";
 
 // pass bootstrap react components as shortCodes to all 
