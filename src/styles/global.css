@@ -98,7 +98,7 @@ footer {
   background: white;
   height: 70px;
   position: fixed;
-  max-width: 100vw !important;
+  max-width: 100vw;
   list-style: none;
   color: var(--primary);
   font-size: large;
@@ -115,13 +115,15 @@ footer {
   border-radius: 2rem;
 }
 
-.responsive-navbar-nav {
-  width: fit-content;
+#navToggle.active {
+  /* text-decoration: none; */
 }
+
+.dropdown {
+}
+
 .nav-item {
-  height: 100%;
   transition: all 0.1s ease-in-out;
-  margin-top: 0;
 }
 
 @keyframes navitem {
@@ -299,9 +301,17 @@ button::before:active {
 .blob {
   position: absolute;
   opacity: 0.4;
-  width: 100%;
+  max-width: 100%;
   height: 100%;
   padding-bottom: 5rem;
+}
+
+#about2pic {
+  border-radius: 2rem;
+}
+.passive-text {
+  text-align: center;
+  padding: 0 5rem;
 }
 
 .consult-text {
@@ -318,14 +328,14 @@ button::before:active {
 .partner-text {
   background-image: linear-gradient(
     225deg,
-    var(--primary) 10%,
-    var(--secondary) 90%
+    var(--primaryLight) 10%,
+    var(--secondaryLight) 90%
   );
   /* color: linear-gradient(225deg, var(--primary) 25%, var(--secondary) 75%); */
   text-align: center;
-  /* border-radius: 1rem; */
+  border-radius: 1rem;
+  width: fit-content;
   font-size: large;
-  /* width: 100%; */
   font-family: "Lato Bold";
   background-size: auto 300%;
   background-position: 0 100%;
@@ -347,6 +357,36 @@ button::before:active {
 .partner-text:hover {
   background-position: 0 0;
 }
+
+.team {
+  background: white;
+}
+
+.teamTitle {
+  position: relative;
+  z-index: 2;
+}
+
+.bio-text {
+  padding-bottom: 1rem;
+}
+
+.bio-name {
+  font-size: 2em;
+  color: var(--primary);
+  text-shadow: 0.1rem 0.1rem 0.2rem gray;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.bio-card {
+  color: var(--darkblue);
+  /* background-color: var(--darkblue); */
+  box-shadow: 0.5rem 0.5rem 1rem gray;
+  font-family: "Lato Bold";
+  height: 100%;
+}
+
 /* /// SVG's /// */
 
 /* top asymmetrical triangle shape */
@@ -371,6 +411,7 @@ button::before:active {
 .custom-shape-divider-top-1642043515 .shape-fill {
   fill: var(--primary);
 }
+
 /* bottom asymmetrical triangle shape */
 .custom-shape-divider-bottom-1642099140 {
   position: absolute;
@@ -393,25 +434,24 @@ button::before:active {
   fill: var(--primary);
 }
 
-.custom-shape-divider-top-1642043323 {
+/* wave shape for TEAM section */
+.custom-shape-divider-top-1642373815 {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  transform: rotate(180deg);
 }
 
-.custom-shape-divider-top-1642043323 svg {
+.custom-shape-divider-top-1642373815 svg {
   position: relative;
   display: block;
-  width: calc(100% + 1.3px);
-  height: 174px;
-  transform: rotateY(180deg);
+  width: calc(134% + 1.3px);
+  height: 200px;
 }
 
-.custom-shape-divider-top-1642043323 .shape-fill {
+.custom-shape-divider-top-1642373815 .shape-fill {
   fill: #1dc0e6;
 }
 
@@ -437,6 +477,29 @@ button::before:active {
 .blog-img {
   width: 100%;
   height: auto;
+}
+
+/* top asymmetrical triangle shape blog section */
+.custom-shape-divider-top-1642043323 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1642043323 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 174px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1642043323 .shape-fill {
+  fill: #1dc0e6;
 }
 
 /* //////////////////// */
@@ -530,9 +593,12 @@ button::before:active {
 No media query for `xs` since this is the default in Bootstrap */
 
 /* Small devices (landscape phones, 576px ) */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
   .keyContent {
     font-family: "Lato Bold", sans-serif !important;
+  }
+  .dropdown {
+    box-shadow: 0 0.5rem 0.5rem rgba(198, 198, 198, 0.8);
   }
 }
 
@@ -547,6 +613,12 @@ No media query for `xs` since this is the default in Bootstrap */
   .custom-shape-divider-bottom-1642099140 svg {
     height: 100px;
   }
+  .nav-brand {
+    margin: auto;
+  }
+  .blob {
+    top: 10%;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -554,6 +626,9 @@ No media query for `xs` since this is the default in Bootstrap */
   .about,
   #keyImg-placeholder {
     height: 400px;
+  }
+  .passive-text {
+    padding: 0;
   }
 }
 

@@ -44,12 +44,12 @@ const ContactForm = () => {
         }
         
     return (
-            <Container className="">
+            <Container className="h-100">
                 
                 <h2 className="contact-text">
                     Have a question? Ask here!
                 </h2>
-                <div className="d-flex justify-content-center">
+                <div className="h-100 d-flex justify-content-center align-items-center">
                     
                     <Card className="p-4 mb-2 col-lg-8">
                         <Form 
@@ -98,7 +98,7 @@ const ContactForm = () => {
                                 <Form.Check type="checkbox" label="Subscribe to our Mailing List for special events and informational articles?" />
                             </Form.Group>
                             <div className="d-flex justify-content-center">
-                                <button type="submit" id="submitButton">
+                                <button type="submit" className="effect" id="submitButton">
                                     Submit
                                 </button>
                             </div>

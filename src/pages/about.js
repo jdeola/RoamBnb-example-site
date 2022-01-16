@@ -91,19 +91,22 @@ const AboutPage = ({ children }) => {
                     </Row>
                              
                 </Container>
-                <Container fluid className="about2 d-flex align-items-center" >
+                <Container fluid className="about2 d-flex align-items-center justify-content-center" >
                     <Blob className="blob"/>
-                    <Row className="flex-row-reverse">
+                    <Row className="flex-row-reverse pt-4 pb-3">
                         
-                        <Col md className="d-flex align-items-center">
+                        <Col md className="d-flex justify-content-center align-items-center">
                             <StaticImage 
-                                src="../images/patio.jpeg"
-                                className="zIndex1"
+                                src="../images/relax.jpeg"
+                                alt="a couple relaxing"
+                                width={600}
+                                height={400}
+                                id="about2pic"
                             />
                             
                         </Col>
-                        <Col md >
-                            <p className="pb-2">
+                        <Col md className="m-auto">
+                            <p className="passive-text">
                                 Take a passive approach to owning rental properties 
                                 while making 2-3x the revenue of a long-term rental.
                             </p>
@@ -118,7 +121,7 @@ const AboutPage = ({ children }) => {
                         </Col>
                     </Row>
                 </Container>
-                <Container fluid className="" >
+                <Container fluid className="py-3" >
                     <Row className="d-flex justify-content-center align-items-center">
                         <Col md className="zIndex1">
                             <p className="text-center">    
@@ -149,15 +152,15 @@ const AboutPage = ({ children }) => {
                 </Container>
             </section>
             
-            <section >
-                <Container >
+            <section className="" >
+                <Container className="py-3" >
                     <Partners/>
                 </Container>
                 
                 
             </section>
             
-            <section className="bg-white">
+            <section className="team py-3">
                 <Team />
             </section>
             
