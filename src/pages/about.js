@@ -3,7 +3,7 @@ import Layout from "../components/Layout.js";
 import { Container, Row, Col } from 'react-bootstrap';
 import { StaticImage } from "gatsby-plugin-image"
 import { Link } from 'gatsby'
-import Partners from "../components/partners"
+import Partners from "../components/Partners.js"
 import useElementOnScreen from "../utilities/useElementObserver.js";
 import Team from "../components/Team.js";
 import Blob from "../assets/blob-haikei.svg"
