@@ -50,13 +50,13 @@ const IndexPage = ({ children }) => {
                             <Col md className="d-flex justify-content-center align-items-center py-2">
                                 
                                 <Link to="/about">
-                                    <button className="splash-btn">
+                                    <button className="effect splash-btn">
                                         Learn More
                                     </button>
                                 </Link>
                             </Col>
                             <Col md className="d-flex justify-content-center align-items-center py-2">
-                                <button className="">
+                                <button className="effect">
                                     Book a Call
                                 </button>
                             </Col>

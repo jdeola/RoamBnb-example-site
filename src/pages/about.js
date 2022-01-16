@@ -107,11 +107,11 @@ const AboutPage = ({ children }) => {
                                 Take a passive approach to owning rental properties 
                                 while making 2-3x the revenue of a long-term rental.
                             </p>
-                            <p className="pb-3">
+                            <p className="pb-3 consult-text">
                                 Schedule a consult to see if your property is a good fit!
                             </p>
                             
-                            <button className="d-flex justify-self-center">
+                            <button className="effect d-flex justify-self-center">
                                 <Link to="/contact">Contact us</Link>
                             </button>    
                         

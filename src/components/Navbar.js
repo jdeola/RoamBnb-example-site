@@ -20,7 +20,7 @@ const NavBar = () => {
             </span>
           </Link>  
           <Navbar.Toggle  id="navToggle" data-bs-toggle="dropdown" aria-controls="responsive-navbar-nav" className="me-2" />
-          <Navbar.Collapse id="responsive-navbar-nav" className="">
+          <Navbar.Collapse id="responsive-navbar-nav" className="bg-white">
             <Container>
               <Nav className=" justify-space-between float-end">
                 <Link to="/about" className="m-2 nav-item ">
