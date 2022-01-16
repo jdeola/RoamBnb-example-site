@@ -7,10 +7,10 @@ import { Container } from 'react-bootstrap'
 
 function Partners() {
     return (
-        <div className="mb-2">
-            <Container>
+        <div className="partners py-3 my-2">
+            <Container className="partner-text">
                 <p>
-                    We parter with industry leading companies to manage our 
+                    We parter with industry leading companies to manage and promote our 
                     properties safely and efficiently.
                 </p>
             </Container>        

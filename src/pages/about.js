@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import Layout from "../components/Layout.js";
 import { Container, Row, Col } from 'react-bootstrap';
 import { StaticImage } from "gatsby-plugin-image"
+import { Link } from 'gatsby'
 import Partners from "../components/partners"
 import useElementOnScreen from "../utilities/useElementObserver.js";
 import Team from "../components/Team.js";
@@ -22,14 +23,11 @@ const AboutPage = ({ children }) => {
         <Layout>
             <section className="100vw">
                 
-                <div className="fixed-bg" >
-                                        
-                </div>
+                <div className="fixed-bg"></div>
                 
                 <Container fluid className= {isVisible? "about show" : "about" } >
-                    <div className="key-bg">
-
-                    </div>
+                    <div className="key-bg"></div>
+              
                     <Row className="fs-2 keyContent pe-3">
                         <Col xs={2} md={4} lg={5}></Col>
                         <Col className="">
@@ -43,9 +41,9 @@ const AboutPage = ({ children }) => {
                     </Row>
                     
                 </Container>
-                <div id="keyImg-placeholder"ref={targetRef}>
 
-                </div>
+                <div id="keyImg-placeholder"ref={targetRef}></div>
+         
                 <Container fluid className="about2 py-3">
                     <div class="custom-shape-divider-top-1642043515">
                         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -63,6 +61,8 @@ const AboutPage = ({ children }) => {
                             <StaticImage 
                                 src="../images/undraw_revenue.png"
                                 id="revenue"
+                                width={400}
+                                height={465}
                             />
 
                         </Col>
@@ -81,9 +81,10 @@ const AboutPage = ({ children }) => {
                         <Col md>
                             <h1 className="text-center">Our Services</h1>
                             <p className="text-center fs-4">
-                                RoamBnB allows you to take a passive approach to owning rental properties while netting you two
-                                to three times more money than traditional long term rentals. Our first step in the process involves
-                                analyzing your property, or potential properties, to make sure it’s a good fit as a short term rental. 
+                                We handle the entire process and manages the property after it is converted, creating a seamless experience for our clients. 
+                                We take pride in what we do and truly get inspired by helping families and investors alike. We also love helping
+                                families purchase their dream vacation home!
+                
                             </p>
 
                         </Col>
@@ -102,24 +103,34 @@ const AboutPage = ({ children }) => {
                             
                         </Col>
                         <Col md >
-                            <p>
-                                We handle the entire process and manages the property after it is converted, creating a seamless experience for our clients. 
-                                We take pride in what we do and truly get inspired by helping families and investors alike. We also love helping
-                                families purchase their dream vacation home!
+                            <p className="pb-2">
+                                Take a passive approach to owning rental properties 
+                                while making 2-3x the revenue of a long-term rental.
                             </p>
+                            <p className="pb-3">
+                                Schedule a consult to see if your property is a good fit!
+                            </p>
+                            
+                            <button className="d-flex justify-self-center">
+                                <Link to="/contact">Contact us</Link>
+                            </button>    
+                        
                         </Col>
                     </Row>
                 </Container>
                 <Container fluid className="" >
                     <Row className="d-flex justify-content-center align-items-center">
-                        <Col className="zIndex1">
-                            <p>    
-                                Once we establish a property is a good fit, we handle 100% of the transition as well as the day to day
-                                operations. Here at Roambnb we want you to take a permanent vacation from worrying about your
-                                property and leave it to us!
+                        <Col md className="zIndex1">
+                            <p className="text-center">    
+                                We handle 100% of the transition as well as the day to day
+                                operations
+                            </p>
+                            <p className="text-center">
+                                So you can take a permanent vacation from worrying about your
+                                property
                             </p>
                         </Col>
-                        <Col className="d-flex justify-content-center align-items-center p-3">
+                        <Col md className="d-flex justify-content-center align-items-center p-3">
                             <StaticImage 
                                 src="../images/undraw_deliveries.png"
                                 alt="people carrying boxes"

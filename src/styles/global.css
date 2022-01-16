@@ -334,8 +334,6 @@ button:hover::before {
 .blob {
   position: absolute;
   opacity: 0.5;
-  top: 5%;
-  left: 10%;
 }
 
 .custom-shape-divider-top-1642043323 {
@@ -360,10 +358,20 @@ button:hover::before {
   fill: #1dc0e6;
 }
 
-.partner-text {
-  background: var(--primary);
-  color: white;
+.partners {
+  min-height: 50vh;
+  width: 100%;
 }
+
+.partner-text {
+  background: var(--secondary);
+  color: white;
+  text-align: center;
+  border-radius: 1rem;
+  width: fit-content;
+  font-size: large;
+}
+
 /* //////////////////// */
 /* /// BLOG PAGE ///// */
 /* ////////////////// */
@@ -392,12 +400,13 @@ button:hover::before {
 /* /// ANIMATONS ///// */
 /* ////////////////// */
 
-.partners {
+/* .partners {
   min-height: 50vh;
-  /* opacity: 0;
+  width: 100%;
+  opacity: 0;
   transform: translateX(-50%);
-  transition: 250ms; */
-}
+  transition: 250ms;
+} */
 
 .show {
   transform: translateX(0);
