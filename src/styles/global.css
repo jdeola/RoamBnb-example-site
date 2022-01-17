@@ -148,6 +148,9 @@ footer {
   animation-fill-mode: forwards;
 }
 
+button {
+  z-index: 1;
+}
 button.effect {
   padding: 0.5rem;
   background-color: transparent;
