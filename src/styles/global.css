@@ -466,6 +466,10 @@ button::before:active {
 /* /// BLOG PAGE ///// */
 /* ////////////////// */
 
+.blogTitle {
+  font-family: "Brown Pen";
+  font-size: 5em;
+}
 .blog-card {
   background: var(--shadow1);
   transition: all 0.2s ease-in-out;
