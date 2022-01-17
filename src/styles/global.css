@@ -276,7 +276,8 @@ button::before:active {
 .about2 {
   position: relative;
   padding: 2rem;
-  min-height: 50vh;
+
+  min-height: 60vh;
   background: white;
   z-index: 1;
   max-width: 100vw;
@@ -290,7 +291,7 @@ button::before:active {
 
 .beachHouse {
   position: relative;
-  height: 40vh;
+  min-height: 50vh;
   background: url(../images/beachHouse.jpeg);
   background-size: cover;
   background-position: bottom center;
@@ -625,7 +626,7 @@ No media query for `xs` since this is the default in Bootstrap */
 @media only screen and (min-width: 769px) and (max-width: 991px) {
   .about,
   #keyImg-placeholder {
-    height: 400px;
+    height: 350px;
   }
   .passive-text {
     padding: 0;
@@ -636,7 +637,7 @@ No media query for `xs` since this is the default in Bootstrap */
 @media only screen and (min-width: 992px) {
   .about,
   #keyImg-placeholder {
-    height: 400px;
+    height: 350px;
   }
 }
 
@@ -644,7 +645,7 @@ No media query for `xs` since this is the default in Bootstrap */
 @media (min-width: 1200px) {
   .about,
   #keyImg-placeholder {
-    height: 500px;
+    height: 400px;
   }
 }
 
