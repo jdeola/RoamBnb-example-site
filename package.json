@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-gatsby",
+  "name": "example real estate website",
   "private": true,
   "version": "1.0.0",
   "description": "Jim Deola - Full Stack Developer - Portfolio",
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jdeola/portfolio-gatsby.git"
+    "url": "git+https://github.com/jdeola/RoamBnb-example-site.git"
   },
   "keywords": [
     "gatsby"
@@ -50,6 +50,6 @@
   "author": "jimdeola",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jdeola/portfolio-gatsbyy/issues"
+    "url": "https://github.com/jdeola/RoamBnb-example-site/issues"
   }
 }
