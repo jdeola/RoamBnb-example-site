@@ -11,9 +11,11 @@ function BlogList({data}) {
 
         <Container>
         
-            <Row xs={1} md={2} className="g-4">
+            <h1 className="blogTitle">Blog</h1> 
+
+            <Row xs={1} md={2} className="p-3">
                 {nodes.map((node) => (
-                    <Col>
+                    <Col xs={12} md={6} >
                         <BlogItem post={node} key={node.frontmatter.id}/>
                     </Col>
                 ))}

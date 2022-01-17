@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { Card } from 'react-bootstrap';
 
@@ -8,7 +8,9 @@ import { Card } from 'react-bootstrap';
 
 const BlogItem = ({post, key}) => {
 
-  const { slug, title, thumbImage, description } = post.frontmatter;
+  const { slug, title, thumb, description } = post.frontmatter;
+
+  const thumbImg = getImage(thumb);
 
   return (
 
@@ -17,11 +19,14 @@ const BlogItem = ({post, key}) => {
           <Card.Title className="fs-3 text-center py-2">
             {title}
           </Card.Title>
-          <GatsbyImage 
-            image={thumbImage} 
-            alt="featured article image" 
-            className="blog-img"
-          />
+          <div className="card-img-top">
+            <GatsbyImage 
+              image={thumbImg} 
+              alt="featured article image" 
+              className="blog-img"
+            />
+          </div>
+          
           <Card.Body>
               <Card.Text>
                 {description}

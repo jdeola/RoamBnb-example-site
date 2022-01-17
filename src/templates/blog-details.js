@@ -6,19 +6,18 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import { Container } from 'react-bootstrap';
 
 
-
 export default function BlogDetails({ data }) {
 
     const { body } = data.mdx;
-    const { title, date, type, banner } = data.mdx.frontmatter;
+    const { title, date, banner } = data.mdx.frontmatter;
     
     const bannerImg = getImage(banner);
+
     return (
         <BlogLayout >
-            
-            <section classname="">
+        
 
-                <div className="text-center"> 
+                <div className="text-center pt-3"> 
                     <h2>{ title }</h2>
                     <p className="text-muted">{ date }</p>
                 </div>
@@ -26,13 +25,9 @@ export default function BlogDetails({ data }) {
 
                 <GatsbyImage image={bannerImg} alt=""/>
 
-                
-                    
-                <MDXRenderer>{body}</MDXRenderer>                
-                
-
-            </section>
-            
+                <Container>
+                    <MDXRenderer>{body}</MDXRenderer>  
+                </Container>
 
         </BlogLayout>
     )
@@ -44,14 +39,15 @@ export const query = graphql`
         id
         body
         frontmatter {
-        title
-        date
-        type
-        banner {
-            childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
+            slug
+            title
+            date
+            type
+            banner {
+                childImageSharp {
+                    gatsbyImageData(layout: FULL_WIDTH)
+                }
             }
-        }
         }
     }
   }`

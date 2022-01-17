@@ -45,6 +45,11 @@ exports.createSchemaCustomization = ({ actions }) => {
           thumb: File! @fileByRelativePath(path: "src")
           banner: File! @fileByRelativePath(path: "src")
           date: Date @dateformat
+          type: String
+          slug: String
+          description: String
+          sliderTxt: String
+          title: String
       }
     `
     createTypes(typeDefs)

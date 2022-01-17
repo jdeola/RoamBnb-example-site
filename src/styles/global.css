@@ -27,6 +27,7 @@ body {
   font-family: "Lato Light", sans-serif;
 }
 
+.blog-padding,
 main {
   padding-top: 70px;
 }
@@ -151,6 +152,7 @@ footer {
 button {
   z-index: 1;
 }
+
 button.effect {
   padding: 0.5rem;
   background-color: transparent;
@@ -366,6 +368,7 @@ button::before:active {
   background: white;
 }
 
+.blogTitle,
 .teamTitle {
   position: relative;
   z-index: 2;

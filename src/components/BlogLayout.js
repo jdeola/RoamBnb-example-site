@@ -50,7 +50,7 @@ const BlogLayout = ({ children }) => {
 
         <Navbar className="" fixed="top" id="blogNav">
             <Navbar.Brand className="ms-2 ps-2" >
-                <Link to="/" className="d-flex align-items-center">
+                <Link to="/about" className="d-flex align-items-center">
                     <StaticImage 
                         src=""
                         alt=''    
@@ -66,8 +66,9 @@ const BlogLayout = ({ children }) => {
             </Navbar.Brand>   
             
         </Navbar>
-
-        <MDXProvider components={shortCodes}>{children}</MDXProvider>
+        <section className="blog-padding">
+          <MDXProvider components={shortCodes}>{children}</MDXProvider>
+        </section>
 
         <Footer />
       </div>
